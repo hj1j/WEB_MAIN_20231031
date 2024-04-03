@@ -23,8 +23,8 @@
         <script type="text/javascript" src = "js/Basic_js_test.js" defer></script>
         <script type="text/javasript" src="js/data_type.js" defer></script>
       </head>
-    <body style="background-color: black;">
-
+      <body style="background-color: black;" onload="pop_up();">
+      
 
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
@@ -68,9 +68,27 @@
               </div>
               <nav class="navbar bg-body-tertiary">
                 <div class="container-fluid">
-                  <form class="d-flex" role="search">
+
+
+
+                  <form action="http://www.google.com/search">
+                    <div>
+                      Let's search Google:
+                      <input name="q" />
+                      <input type="submit" />
+                    </div>
+                  </form>
+
+                  <form class="d=flex" role="search" onsumit="return googleSearch();">
+                  <input class="form-control me-2" id="search_input" name="q" type="search" placeholder="키워드 입력"aria-label="Search"> 
+                  <button class ="btn btn-outline-success" id="search_btn" type="submit">검색하기</button>             
+                  </form>
+                  
+
+
+                  <!--<form class="d-flex" role="search">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" id="search_btn" type="submit">Search</button>
+                    <button class="btn btn-outline-success" id="search_btn" type="submit">Search</button>-->
                     <!--id="search_btn"추가함-->
                   </form>
                 </div>
