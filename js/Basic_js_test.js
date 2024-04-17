@@ -1,3 +1,9 @@
+const search_message = () => 
+{
+    const c = '검색을 수행합니다';
+    alert(c);
+};
+
 var jb = 'hi';//변수 선언 후 주석 가능(한줄 주석)//
 var a =1;
 var b;
@@ -7,11 +13,13 @@ b=5;
 여러 줄 주석: 여러 줄에 걸쳐 주석을 처리합니다.
 */
 
-document.getElementById("search_btn").addEventListener('click',search_massage);
+document.getElementById("search_btn").addEventListener('click',search_message);
 
-function search_massage(){
-    alert("검색을 수행합니다!");
-}
+//function search_massage(){
+//    alert("검색을 수행합니다!");
+//}
+
+
 if(true) {
     let c ='let 접근';
     var c_1 = 'var 접근';
