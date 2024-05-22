@@ -47,7 +47,7 @@ function getCookie(name) {
         for ( var index in cookie_array) {
             var cookie_name = cookie_array[index].split("=");
 
-            if (cookie_name[0] == "id") {
+            if (cookie_name[0] == "popupYN") {//수정
                 return cookie_name[1];
             }
         }
