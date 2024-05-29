@@ -139,7 +139,7 @@ function session_get() { //세션 읽기
         alert("세션 스토리지 지원 x");
     }
 }
-//
+
 function session_check() {//세션 검사
     if(sessionStorage.getItem("Session_Storage_id")){
         alert("이미 로그인 되었습니다.");
