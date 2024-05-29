@@ -1,4 +1,4 @@
-<!--로그인 된 상태-->
+<!--로그인 된 상태의 화면-->
 
 <head>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.1.0/purify.min.js" integrity="sha512-ZCsRHqhdDXrq4iTXVZLkGBsOfDlvhvHhEMQlCosf9Oqy1p6xizF1LSWa6uuISGqeh9PmCzfneGcYZvc9t/hjaQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -38,22 +38,7 @@
                         <div class="mb-md-5 mt-md-4 pb-5">
                           <form method="get" id="login_form" action="/login/index_login.html">
                             <!--폼-->
-                          <h2 class="fw-bold mb-2 text-uppercase">로그인 화면</h2>
-                          <p class="text-white-50 mb-5">로그인용 이메일과 패스워드를 입력!</p>
             
-                          <div data-mdb-input-init class="form-outline form-white mb-4">
-                            <input type="email" id="typeEmailX" class="form-control form-control-lg"name="id"/>
-                            <label class="form-label" for="typeEmailX">이메일</label>
-                          </div>
-  
-                          <div data-mdb-input-init class="form-outline form-white mb-4">
-                            <input type="password" id="typePasswordX" class="form-control form-control-lg"name="password"/>
-                            <label class="form-label" for="typePasswordX">패스워드</label>
-                          </div>
-            
-                          <p class="small mb-5 pb-lg-2"><a class="text-white-50" href="#!">패스워드 찾기</a></p>
-            
-                          <button data-mdb-button-init data-mdb-ripple-init class="btn btn-outline-light btn-lg px-5" id="login_btn" type="button">Login</button>
                           <button data-mdb-button-init data-mdb-ripple-init class="btn btn-outline-light btn-lg px-5" id="logout_btn" type="button">Logout</button>
             
                           <div class="d-flex justify-content-center text-center mt-4 pt-1">
@@ -64,15 +49,8 @@
             
                         </div>
   
-                        <div class="checkbox mb-3">
-                          <label>
-                            <input type="checkbox" value="remember-me" id="idSaveCheck"> 아이디 기억
-                          </label>
-                        </div>
+                       
             
-                        <div>
-                          <p class="mb-0">Don't have an account? <a href="#!" class="text-white-50 fw-bold">Sign Up</a>
-                          </p>
                           
                         </div>
                       </form>

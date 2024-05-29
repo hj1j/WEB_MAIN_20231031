@@ -100,7 +100,7 @@ function getCookie(name) {
         var cookie_array = cookie.split("; ");
         for ( var index in cookie_array) {
             var cookie_name = cookie_array[index].split("=");
-            if (cookie_name[0] == "popupYN") {
+            if (cookie_name[0] == "id") {//if (cookie_name[0] == "popupYN") {
                 return cookie_name[1];
             }
         }
@@ -162,20 +162,20 @@ function logout(){
 
 //암복호화
 function encodeByAES256(key, data) {
-    constcipher= CryptoJS.AES.encrypt(data, CryptoJS.enc.Utf8.parse(key),{
+    const cipher= CryptoJS.AES.encrypt(data, CryptoJS.enc.Utf8.parse(key),{
         iv: CryptoJS.enc.Utf8.parse(""),
         padding: CryptoJS.pad.Pkcs7,
         mode: CryptoJS.mode.CBC
     });
-    returncipher.toString();
+    return cipher.toString();
 }
 function decodeByAES256(key, data){
-    constcipher= CryptoJS.AES.decrypt(data, CryptoJS.enc.Utf8.parse(key), {
+    const cipher= CryptoJS.AES.decrypt(data, CryptoJS.enc.Utf8.parse(key), {
         iv: CryptoJS.enc.Utf8.parse(""),
         padding: CryptoJS.pad.Pkcs7,
         mode: CryptoJS.mode.CBC
     });
-returncipher.toString(CryptoJS.enc.Utf8);
+return cipher.toString(CryptoJS.enc.Utf8);
 }
 
 function encrypt_text(password){
@@ -204,6 +204,17 @@ function init_logined(){
         alert("세션 스토리지 지원x");
     }
 }
+
+function addJavascript(jsname) { // 자바스크립트 외부 연동
+    var th = document.getElementsByTagName('head')[0];
+    var s = document.createElement('script');
+    s.setAttribute('type','text/javascript');
+    s.setAttribute('src',jsname);
+    th.appendChild(s);
+}
+addJavascript('/js/security.js'); //암복호화 함수
+addJavascript('/js/session.js');  //세션 함수
+addJavascript('/js/cookie.js'); //쿠키 함수
 
 document.getElementById("login_btn").addEventListener('click', check_input);
 document.getElementById("logout_btn").addEventListener('click', logout);
