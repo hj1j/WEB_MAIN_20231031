@@ -1,3 +1,5 @@
+//로그아웃
+
 function addJavascript(jsname) { // 자바스크립트 외부 연동
     var th = document.getElementsByTagName('head')[0];
     var s = document.createElement('script');
@@ -8,7 +10,6 @@ function addJavascript(jsname) { // 자바스크립트 외부 연동
 addJavascript('/js/security.js'); //암복호화 함수
 addJavascript('/js/session.js');  //세션 함수
 addJavascript('/js/cookie.js'); //쿠키 함수
-
 
 const idsave_check = document.getElementById('idSaveCheck');
 
@@ -100,4 +101,4 @@ const check_xss = (input) => {
 };
 
 
-document.getElementById("login_btn").addEventListener('click', check_input);
+document.getElementById("logout_btn").addEventListener('click', logout);
