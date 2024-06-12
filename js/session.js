@@ -54,6 +54,7 @@ function session_get() { //세션 읽기
     }
 }
 
+//
 function session_check() {//세션 검사
     if(sessionStorage.getItem("Session_Storage_id")){
         alert("이미 로그인 되었습니다.");
@@ -71,5 +72,5 @@ function session_del() {//세션 삭제
 
 function logout(){
     session_del(); //세션 삭제
-    location.href='.../index.html';
+    location.href='../index.html';
 }
