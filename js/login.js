@@ -52,7 +52,7 @@ const check_xss = (input) => {
     return sanitizedInput;
 };
         
-    const login1 = () => {         
+    const check_input = () => {         
     const loginForm = document.getElementById('login_form');
     const loginBtn = document.getElementById('login_btn');
     const emailInput= document.getElementById('typeEmailX');
@@ -122,4 +122,4 @@ const check_xss = (input) => {
 };
 
 
-document.getElementById("login_btn").addEventListener('click', login1);
+document.getElementById("login_btn").addEventListener('click', check_input);
